@@ -1,0 +1,28 @@
+// You are using Java
+import java.util.*;
+class Student{
+    
+    String name;
+    int age;
+    Long mobnum;
+    
+    void display()
+    {
+        System.out.println("Name: "+name);
+        System.out.println("Age: "+age);
+        System.out.println("Mobile Number: "+mobnum);
+    }
+    
+}
+class main{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Student s1=new Student();
+        s1.name=sc.nextLine();
+        s1.age=sc.nextInt();
+        s1.mobnum=sc.nextLong();
+        
+        s1.display();
+    }
+}
