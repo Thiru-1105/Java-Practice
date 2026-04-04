@@ -1,0 +1,53 @@
+import java.util.*;
+class Student{
+    private String name;
+    private int age;
+    private double marks;
+    
+    Student(String name,int age,double marks)
+    {
+        this.name=name;
+        this.age=age;
+        this.marks=marks;
+    }
+    
+    public int getAge(){
+        return age;
+    }
+    
+    public double getMarks(){
+        return marks;
+    }
+    
+    public void setAge(int age){
+        if(age>0 && age<=100)
+        {
+            this.age=age;
+            System.out.println("Updated Age: "+this.age);
+        }
+        else{
+            System.out.println("Invalid Age!");
+        }
+    }
+    
+    public void setMarks(double marks){
+        if(marks>=0 && marks<=100)
+        {
+            this.marks=marks;
+        }
+        else{
+            System.out.println("Invalid Marks!");
+        }
+    }
+}
+class Main{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        Student s1=new Student("Thiru",25,98);
+        System.out.println("Student mark scored= "+s1.getMarks());
+        
+        s1.setAge(101);
+        s1.setAge(100);
+        
+    }
+}
